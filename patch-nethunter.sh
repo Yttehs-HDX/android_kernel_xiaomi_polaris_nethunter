@@ -45,8 +45,8 @@ fi
 mkdir -p $(pwd)/$NETHUNTER_PROJECT_DIR/nethunter-installer/devices
 
 cat << EOL > kali-nethunter-project/nethunter-installer/devices/devices.cfg
-# Xiaomi 10 for LineageOS Android 14
-[umi]
+# Xiaomi Mix 2s for LineageOS Android 14
+[polaris]
 author = "Shetty Yttehs"
 arch = arm64
 version = "${KERNEL_VERSION}"
@@ -54,5 +54,5 @@ flasher = anykernel
 modules = 1
 slot_device = 0
 block = /dev/block/bootdevice/by-name/boot
-devicenames = umi,Mi10
+devicenames = polaris,mix2s
 EOL
