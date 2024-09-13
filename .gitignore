@@ -126,3 +126,7 @@ Android.bp
 
 # build files
 out/
+
+# inline repo
+kali-nethunter-kernel/
+kali-nethunter-project/
