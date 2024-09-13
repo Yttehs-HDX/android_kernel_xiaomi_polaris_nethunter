@@ -12,7 +12,7 @@
 # +---------------------------------+
 
 # kernel
-DEFCONFIG="polaris-stock_defconfig"
+DEFCONFIG="polaris-miku_defconfig"
 O="out"
 ARCH="arm64"
 
@@ -50,14 +50,14 @@ make -j$(nproc --all) O=$O \
                       CFLAGS_KERNEL=-Wno-error \
                       KCFLAGS=-Wno-error
 
-#echo -e "${YELLOW}-> make modules ...${RESET}"
-#make modules_install INSTALL_MOD_PATH="." \
-#                     INSTALL_MOD_STRIP=1 \
-#                     O=$O \
-#                     ARCH=$ARCH \
-#                     CC=clang \
-#                     CLANG_TRIPLE=aarch64-linux-gnu- \
-#                     CROSS_COMPILE=aarch64-linux-gnu- \
-#                     CROSS_COMPILE_ARM32=arm-linux-gnueabi \
-#                     CFLAGS_KERNEL=-Wno-error \
-#                     KCFLAGS=-Wno-error
+echo -e "${YELLOW}-> make modules ...${RESET}"
+make modules_install INSTALL_MOD_PATH="." \
+                     INSTALL_MOD_STRIP=1 \
+                     O=$O \
+                     ARCH=$ARCH \
+                     CC=clang \
+                     CLANG_TRIPLE=aarch64-linux-gnu- \
+                     CROSS_COMPILE=aarch64-linux-gnu- \
+                     CROSS_COMPILE_ARM32=arm-linux-gnueabi \
+                     CFLAGS_KERNEL=-Wno-error \
+                     KCFLAGS=-Wno-error
