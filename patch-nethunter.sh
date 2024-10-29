@@ -35,7 +35,7 @@ if [ -d "$NETHUNTER_PROJECT_DIR" ]; then
     git -C $NETHUNTER_PROJECT_DIR pull
 else
     echo "[!] $NETHUNTER_PROJECT_DIR not exits, start cloning..."
-    git clone https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-project --depth=1
+    git clone https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-project --depth=1 --branch=2024.3
 fi
 
 mkdir -p $(pwd)/$NETHUNTER_PROJECT_DIR/nethunter-installer/devices
