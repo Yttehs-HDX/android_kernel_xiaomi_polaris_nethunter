@@ -6,9 +6,7 @@ NETHUNTER_PROJECT_DIR="kali-nethunter-project"
 
 if [ -d "$NETHUNTER_KERNEL_DIR" ]; then
     echo "[+] $NETHUNTER_KERNEL_DIR exits"
-		cd $(pwd)/$NETHUNTER_KERNEL_DIR
-    git pull
-    cd ..
+    git -C $NETHUNTER_KERNEL_DIR pull
 else
     echo "[!] $NETHUNTER_KERNEL_DIR not exits, start cloning..."
     git clone https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-kernel.git
@@ -34,9 +32,7 @@ fi
 
 if [ -d "$NETHUNTER_PROJECT_DIR" ]; then
     echo "[+] $NETHUNTER_PROJECT_DIR exits"
-    cd $(pwd)/$NETHUNTER_PROJECT_DIR
-    git pull
-    cd ..
+    git -C $NETHUNTER_PROJECT_DIR pull
 else
     echo "[!] $NETHUNTER_PROJECT_DIR not exits, start cloning..."
     git clone https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-project --depth=1
